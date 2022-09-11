@@ -15,8 +15,9 @@ const station = {
 
     if (station.readings.length > 0) {
       stationAnalytics.updateWeather(station);
+      stationAnalytics.updateGraphs(station).then();
     }
-    stationAnalytics.updateGraphs(station).then();
+
     const viewData = {
       title: 'Station',
       station: station,
@@ -40,7 +41,7 @@ const station = {
     };
 
     stationStore.addReading(stationId, newReading);
-    station.latestReading.temp = newReading.temp;
+
     stationAnalytics.updateGraphs(station).then();
     response.redirect('/station/' + stationId);
   },

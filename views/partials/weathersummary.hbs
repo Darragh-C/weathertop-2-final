@@ -70,12 +70,13 @@
         <div class="ui segment">
           <h3>Wind speed</h3>
           <i class="huge teal wind icon"></i>
-          <br>
+
           {{#ifEq windTrend 1}}
             <i class="huge right floated green arrow up icon"></i>
           {{else ifEq windTrend -1}}
             <i class="huge red arrow down icon"></i>
           {{/ifEq}}
+          <br>
           <br>
           {{latestReading.beaufourt}} Bft
           <br>

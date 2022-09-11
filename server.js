@@ -42,6 +42,6 @@ app.set("view engine", ".hbs");
 const routes = require("./routes");
 app.use("/", routes);
 
-const listener = app.listen(process.env.PORT || 4000, function() {
+const listener = app.listen(process.env.PORT || 4001, function() {
   logger.info(`weathertop-2-release-4 started on port ${listener.address().port}`);
 });
