@@ -1,0 +1,117 @@
+{{#if readings}}
+  <div class="ui centered equal width grid">
+    <div class="row">
+      <div class="column">
+        <div class="ui segment">
+          <h3>{{stationName}}</h3>
+          <i class="huge blue map marker icon"></i>
+          <br>
+          <br>
+          Latitude: {{latitude}}
+          <br>
+          Longitude: {{longitude}}
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui segment">
+          <h3>Weather</h3>
+          <! -- renders openweather icon for API readings -->
+          {{#if latestReading.openWeatherApi}}
+            <image src="http://openweathermap.org/img/wn/{{latestReading.openWeatherIcon}}@2x.png"></image>
+            <! -- renders semantic ui icon for user added readings  -->
+          {{else}}
+            <i class="huge grey right floated {{latestReading.weatherIcon}} icon"></i>
+          {{/if}}
+          <br>
+          <! -- renders openweather description for API readings -->
+          {{#if latestReading.openWeatherApi}}
+            {{latestReading.openWeatherDesc}}
+            <! -- renders homemade weather code for user added readings  -->
+          {{else}}
+            <br>
+            {{latestReading.weather}}
+            <br>
+            <br>
+          {{/if}}
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui segment">
+          <h3>Temp</h3>
+          <i class="huge orange temperature low icon"></i>
+          {{#ifEq tempTrend 1}}
+            <i class="huge right floated green arrow up icon"></i>
+          {{else ifEq tempTrend -1}}
+            <i class="huge red arrow down icon"></i>
+          {{/ifEq}}
+          <br>
+          <br>
+          {{latestReading.temp}} C or {{latestReading.tempFar}} F
+          <br>
+          Max: {{maxTemp}}
+          <br>
+          Min: {{minTemp}}
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui segment">
+          <h3>Wind speed</h3>
+          <i class="huge teal wind icon"></i>
+          <br>
+          {{#ifEq windTrend 1}}
+            <i class="huge right floated green arrow up icon"></i>
+          {{else ifEq windTrend -1}}
+            <i class="huge red arrow down icon"></i>
+          {{/ifEq}}
+          <br>
+          {{latestReading.beaufourt}} Bft
+          <br>
+          Max: {{maxWind}}
+          <br>
+          Min: {{minWind}}
+          <br>
+          Wind direction:
+          <br>
+          {{latestReading.windCompass}}
+          <br>
+          Feels like: {{latestReading.windChill}}
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui segment">
+          <h3>Pressure</h3>
+          <i class="huge grey tachometer alternate icon"></i>
+          {{#ifEq pressureTrend 1}}
+            <i class="huge right floated green arrow up icon"></i>
+          {{else ifEq pressureTrend -1}}
+            <i class="huge red arrow down icon"></i>
+          {{/ifEq}}
+          <br>
+          <br>
+          {{latestReading.pressure}} hPa
+          <br>
+          Max: {{maxPressure}}
+          <br>
+          Min: {{minPressure}}
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/if}}

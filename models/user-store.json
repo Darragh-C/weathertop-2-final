@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "email": "jane@doe.com",
+      "password": "password",
+      "id": "0f1da410-2b8c-11ed-a8f9-eb3ada4a8b4b"
+    },
+    {
+      "firstName": "Teressa",
+      "lastName": "Manion",
+      "email": "teressa@manion.com",
+      "password": "password",
+      "id": "d92b9350-315b-11ed-a0b9-3b237b06fb71"
+    }
+  ]
+}

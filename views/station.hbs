@@ -1,0 +1,15 @@
+{{> menu}}
+
+<section class="ui center aligned middle aligned segment">
+  <h2 class="ui header">
+    {{station.stationName}}
+  </h2>
+  {{#if station.readings}}
+    {{> listreadings}}
+    {{> tempgraph}}
+    {{> windgraph}}
+    {{> pressuregraph}}
+  {{/if}}
+  {{> addreading}}
+  {{> autogeneratereading}}
+</section>

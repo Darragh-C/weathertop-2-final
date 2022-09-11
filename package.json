@@ -1,0 +1,41 @@
+{
+  "name": "weathertop 2 baseline",
+  "version": "0.0.1",
+  "description": "Baseline project for weathertop 2.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@asymmetrik/ngx-leaflet": "^14.0.1",
+    "axios": "^0.27.2",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-handlebars": "^5.3.2",
+    "fs-extra": "^10.0.0",
+    "leaflet": "^1.8.0",
+    "lodash": "^4.17.21",
+    "lowdb": "^1.0.0",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3"
+  },
+  "repository": {
+    "url": "https://github.com/wit-hdip-comp-sci-2021/glitch-template"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ],
+  "prettier": {
+    "singleQuote": false,
+    "printWidth": 120
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.7.11",
+    "prettier": "^2.3.0"
+  }
+}

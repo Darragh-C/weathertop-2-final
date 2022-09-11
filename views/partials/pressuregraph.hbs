@@ -1,0 +1,26 @@
+<div class="ui segment" id="pressureChart"></div>
+<script>
+  const pressureData = {
+    labels: [
+      {{#each station.latestReading.trendLabels}}
+        "{{this}}",
+      {{/each}}
+    ],
+    datasets: [
+      {
+        name: "Pressure", type: "line",
+        values: [
+          {{#each station.latestReading.pressureTrend}}
+            {{this}},
+          {{/each}}
+        ]
+      }
+    ]
+  };
+  const pressureChart = new frappe.Chart("#pressureChart", {
+    title: "Pressure speed trend",
+    data: pressureData,
+    type: "line",
+    height: 250,
+  });
+</script>
